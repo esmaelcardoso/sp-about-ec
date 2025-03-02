@@ -39,7 +39,41 @@ function TechnologiesContainer() {
                         {tech.icon}
                         <div className="technology-info">
                             <h3>{tech.name}</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
+                            
+
+                            {tech.id === "html" ? (
+                                <p>Markup Language</p>
+                            ) : tech.id === "css" ? (
+                                <p>Style Language</p>
+                            )
+                                : tech.id === "js" ? (
+                                    <p>Programming Language</p>
+                                )
+                                    : tech.id === "ts" ? (
+                                        <p>JavaScript Superset</p>
+                                    )
+                                        : tech.id === "node" ? (
+                                            <p>JS Exec Environment</p>
+                                        )
+                                            : tech.id === "react" ? (
+                                                <p>JavaScript Library</p>
+                                            )
+                                                : tech.id === "sqlserver" ? (
+                                                    <p>Relational DBMS</p>
+                                                )
+                                                    : tech.id === "mysql" ? (
+                                                        <p>Relational DBMS</p>
+                                                    )
+                                                        : tech.id === "mongodb" ? (
+                                                            <p>Non-Relational DBMS</p>
+                                                        )
+                                                            : tech.id === "git" ? (
+                                                                <p>Version System</p>
+                                                            )
+                                                                : (
+                                                                    <p>Source Code Hosting</p>
+                                                                )}
                         </div>
                     </div>
                 ))}
